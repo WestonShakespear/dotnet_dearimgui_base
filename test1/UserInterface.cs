@@ -23,10 +23,11 @@ namespace testOne
 
         public static void WindowOnOffs()
         {
+            // ImGui.PushStyleColor(ImGuiCol.WindowBg, new System.Numerics.Vector4(22f, 22f, 22f, 0f) / 255);
             LoadMenuBar();
-            demoWindow();
+            // demoWindow();
             //demoValueWindow();
-            //ImGui.ShowDemoWindow();
+            ImGui.ShowDemoWindow();
         }
 
         public static void LoadOCCTWindow(ref float CameraWidth, ref float CameraHeight, ref int framebufferTexture)
@@ -151,10 +152,10 @@ namespace testOne
         {
             ImGui.Begin("Demo");
 
-            ImGui.Checkbox("Capture", ref Game.captureLive);
+            // ImGui.Checkbox("Capture", ref Game.captureLive);
 
-             ImGui.SliderInt("A:", ref Game.a, 0, 255);
-             ImGui.SliderInt("B:", ref Game.b, 0, 255);
+            //  ImGui.SliderInt("A:", ref Game.a, 0, 255);
+            //  ImGui.SliderInt("B:", ref Game.b, 0, 255);
             // ImGui.SliderFloat("Vert1Z", ref Game.vertices[2], -1.0f, 1.0f);
 
             // ImGui.SliderFloat("Vert2X", ref Game.vertices[3], -1.0f, 1.0f);
@@ -173,12 +174,12 @@ namespace testOne
         public static void demoValueWindow()
         {
             ImGui.Begin("Values");
-            ImGui.Text(Game.angle.ToString());
+            // ImGui.Text(Game.angle.ToString());
             ImGui.Separator();
-            ImGui.Text("R: " + Game.colorPicked.X.ToString());
-            ImGui.Text("G: " + Game.colorPicked.Y.ToString());
-            ImGui.Text("B: " + Game.colorPicked.Z.ToString());
-            ImGui.Text("A: " + Game.colorPicked.W.ToString());
+            // ImGui.Text("R: " + Game.colorPicked.X.ToString());
+            // ImGui.Text("G: " + Game.colorPicked.Y.ToString());
+            // ImGui.Text("B: " + Game.colorPicked.Z.ToString());
+            // ImGui.Text("A: " + Game.colorPicked.W.ToString());
             ImGui.End();
         }
 

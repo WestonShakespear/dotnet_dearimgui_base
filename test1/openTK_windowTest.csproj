@@ -13,8 +13,12 @@
     <PackageReference Include="Emgu.CV.runtime.ubuntu-x64" Version="4.7.0.5276" />
     <PackageReference Include="Emgu.CV.runtime.windows" Version="4.7.0.5276" />
     <PackageReference Include="ImGui.NET" Version="1.89.5" />
-    <PackageReference Include="OpenTK" Version="4.7.7" />
+    <PackageReference Include="OpenTK" Version="4.8.1" />
     <PackageReference Include="SFML.net" Version="2.5.0" />
     <PackageReference Include="StbImageSharp" Version="2.27.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\dotnet_opentk_base\WS_ENGINE_BASE\WS_ENGINE_BASE.csproj" />
   </ItemGroup>
 </Project>
