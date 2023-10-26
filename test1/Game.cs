@@ -58,8 +58,8 @@ namespace testOne {
 
             UIController = new ImGuiController((int)WindowWidth, (int)WindowHeight, fontPath, fontSize);
 
-            string frag = @"C:\Users\wes\github-repos\dotnet_opentk_base\WS_ENGINE_BASE\shader.frag";
-            string vert = @"C:\Users\wes\github-repos\dotnet_opentk_base\WS_ENGINE_BASE\shader.vert";
+            string frag = @"..\..\dotnet_opentk_base\WS_ENGINE_BASE\shader.frag";
+            string vert = @"..\..\dotnet_opentk_base\WS_ENGINE_BASE\shader.vert";
 
             engine = new Engine(width, height, Size, vert, frag);
         }

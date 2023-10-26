@@ -33,6 +33,10 @@ namespace testOne {
         ImGuiController UIController;
 
 
+        public static bool Subdivide = false;
+        public static bool SubdivideDe = false;
+
+
 
         public Game(int width, int height, string title, string fontPath, float fontSize)
             : base(GameWindowSettings.Default, new NativeWindowSettings()
@@ -57,8 +61,7 @@ namespace testOne {
 
             UIController = new ImGuiController((int)WindowWidth, (int)WindowHeight, fontPath, fontSize);
 
-            string frag = @"C:\Users\wes\github-repos\dotnet_opentk_base\WS_ENGINE_BASE\shader.frag";
-            string vert = @"C:\Users\wes\github-repos\dotnet_opentk_base\WS_ENGINE_BASE\shader.vert";
+            Logic.Logic.RenderClearScreen = false;
 
         }
 
@@ -87,6 +90,13 @@ namespace testOne {
         protected override void OnUpdateFrame(FrameEventArgs e)
         {
             base.OnUpdateFrame(e);
+
+            if (Subdivide == true)
+            {
+                Logic.Logic.Subdivide();
+                Subdivide = false;
+                SubdivideDe = true;
+            }
 
             int status = -2;
             // engine.UpdateFrame(e, KeyboardState, MouseState, IsFocused, Size, ref status);

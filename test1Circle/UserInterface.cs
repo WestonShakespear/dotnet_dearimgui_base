@@ -163,11 +163,45 @@ namespace testOne
 
 
             ImGui.SliderInt("Segments: ", ref Logic.Logic.Segments, 0, 100);
-            ImGui.SliderFloat("Radius: ", ref Logic.Logic.CircleRadius, -1.0f, 1.0f);
+            ImGui.SliderFloat("Radius: ", ref Logic.Logic.CircleSize.Z, -1.0f, 1.0f);
             
 
-            ImGui.SliderFloat("X: ", ref Logic.Logic.CircleX, -1.0f, 1.0f);
-            ImGui.SliderFloat("Y: ", ref Logic.Logic.CircleY, -1.0f, 1.0f);
+            ImGui.SliderFloat("X: ", ref Logic.Logic.CircleSize.X, -1.0f, 1.0f);
+            ImGui.SliderFloat("Y: ", ref Logic.Logic.CircleSize.Y, -1.0f, 1.0f);
+
+
+            string message = "Circles Colliding:  ";
+            if (Logic.Logic.collideC)
+            {
+                message += "Yes";
+            }
+            else
+            {
+                message += "No";
+            }
+            ImGui.Text(message);
+
+
+            message = "Circle&Square Colliding:  ";
+            if (Logic.Logic.collideS)
+            {
+                message += "Yes";
+            }
+            else
+            {
+                message += "No";
+            }
+            ImGui.Text(message);
+
+            if (ImGui.Button("Subdivide"))
+            {
+                if (!Game.SubdivideDe)
+                    Game.Subdivide = true;
+            }
+            else
+            {
+                Game.SubdivideDe = false;
+            }
             //  ImGui.SliderInt("B:", ref Game.b, 0, 255);
             // ImGui.SliderFloat("Vert1Z", ref Game.vertices[2], -1.0f, 1.0f);
 
