@@ -6,6 +6,9 @@ using ImGuiNET;
 
 using static testOne.Game;
 
+using static WS_ENGINE_BASE.Engine;
+using static WS_2D_PIXEL.Square;
+
 namespace testOne
 {
     class GUI
@@ -25,9 +28,9 @@ namespace testOne
         {
             // ImGui.PushStyleColor(ImGuiCol.WindowBg, new System.Numerics.Vector4(22f, 22f, 22f, 0f) / 255);
             LoadMenuBar();
-            // demoWindow();
+            demoWindow();
             //demoValueWindow();
-            ImGui.ShowDemoWindow();
+            // ImGui.ShowDemoWindow();
         }
 
         public static void LoadOCCTWindow(ref float CameraWidth, ref float CameraHeight, ref int framebufferTexture)
@@ -151,6 +154,10 @@ namespace testOne
         public static void demoWindow()
         {
             ImGui.Begin("Demo");
+
+            // ImGui.Text("Total Cubes: " + WS_ENGINE_BASE.Engine.sq1.CubeCounter);
+            ImGui.Text("Total Cubes: " + WS_2D_PIXEL.Square.CubeCounter);
+            
 
             // ImGui.Checkbox("Capture", ref Game.captureLive);
 
