@@ -25,7 +25,7 @@ namespace testOne
         public static void WindowOnOffs()
         {
             // ImGui.PushStyleColor(ImGuiCol.WindowBg, new System.Numerics.Vector4(22f, 22f, 22f, 0f) / 255);
-            // LoadMenuBar();
+            LoadMenuBar();
             demoWindow();
             //demoValueWindow();
             // ImGui.ShowDemoWindow();
@@ -163,7 +163,7 @@ namespace testOne
 
 
             ImGui.SliderInt("Segments: ", ref Logic.Logic.Segments, 0, 100);
-            ImGui.SliderFloat("Radius: ", ref Logic.Logic.CircleSize.Z, -1.0f, 1.0f);
+            ImGui.SliderFloat("Radius: ", ref Logic.Logic.CircleSize.Z, 0.0f, 1.0f);
             
 
             ImGui.SliderFloat("X: ", ref Logic.Logic.CircleSize.X, -1.0f, 1.0f);

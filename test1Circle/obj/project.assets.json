@@ -2615,39 +2615,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\wes\\.nuget\\packages\\": {},
-    "D:\\Software\\VS\\SDK\\NuGetPackages": {}
+    "/home/westonshakespear/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wes\\github-repos\\dotnet_dearimgui_base\\test1Circle\\openTK_windowTest.csproj",
+      "projectUniqueName": "/home/westonshakespear/Github/dotnet_dearimgui_base/test1Circle/openTK_windowTest.csproj",
       "projectName": "openTK_windowTest",
-      "projectPath": "C:\\Users\\wes\\github-repos\\dotnet_dearimgui_base\\test1Circle\\openTK_windowTest.csproj",
-      "packagesPath": "C:\\Users\\wes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wes\\github-repos\\dotnet_dearimgui_base\\test1Circle\\obj\\",
+      "projectPath": "/home/westonshakespear/Github/dotnet_dearimgui_base/test1Circle/openTK_windowTest.csproj",
+      "packagesPath": "/home/westonshakespear/.nuget/packages/",
+      "outputPath": "/home/westonshakespear/Github/dotnet_dearimgui_base/test1Circle/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Software\\VS\\SDK\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\wes\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/westonshakespear/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\wes\\github-repos\\dotnet_opentk_base\\HelloCircle\\HelloCircle.csproj": {
-              "projectPath": "C:\\Users\\wes\\github-repos\\dotnet_opentk_base\\HelloCircle\\HelloCircle.csproj"
+            "/home/westonshakespear/Github/dotnet_opentk_base/HelloCircle/HelloCircle.csproj": {
+              "projectPath": "/home/westonshakespear/Github/dotnet_opentk_base/HelloCircle/HelloCircle.csproj"
             }
           }
         }
@@ -2702,12 +2695,22 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.8, 7.0.8]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[7.0.8, 7.0.8]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.305/RuntimeIdentifierGraph.json"
       }
     }
   }

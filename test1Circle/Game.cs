@@ -86,16 +86,54 @@ namespace testOne {
             SwapBuffers();
         }
 
+        const float move = 0.01f;
 
         protected override void OnUpdateFrame(FrameEventArgs e)
         {
             base.OnUpdateFrame(e);
 
-            if (Subdivide == true)
+            MouseState mouse = MouseState;
+
+            if (mouse[MouseButton.Left] && KeyboardState.IsKeyDown(Keys.LeftControl))
             {
-                Logic.Logic.Subdivide();
-                Subdivide = false;
-                SubdivideDe = true;
+                float x_frame = (mouse.X / Size.X * 2) - 1.0f;
+                float y_frame = ((1 - (mouse.Y / Size.Y)) * 2) - 1.0f;
+
+                float circleX = Logic.Logic.CircleSize.X;
+                float circleY = Logic.Logic.CircleSize.Y;
+
+                float x_dist = System.Math.Abs(x_frame - circleX);
+                float y_dist = System.Math.Abs(y_frame - circleY);
+
+
+                if (-1.0f <= x_frame && x_frame <= 1.0f)
+                {
+                    if (-1.0f <= y_frame && y_frame <= 1.0f)
+                    {
+                        // Console.WriteLine("{0} {1}", x_frame, y_frame);
+                       
+
+                        if (circleX < x_frame)
+                        {
+                            circleX += move * x_dist;
+                        }
+                        if (circleX > x_frame)
+                        {
+                            circleX -= move * x_dist;
+                        }
+                        if (circleY < y_frame)
+                        {
+                            circleY += move * y_dist;
+                        }
+                        if (circleY > y_frame)
+                        {
+                            circleY -= move * y_dist;
+                        }
+                        Logic.Logic.CircleSize.X = circleX;
+                        Logic.Logic.CircleSize.Y = circleY;
+
+                    }
+                }
             }
 
             int status = -2;
@@ -118,6 +156,8 @@ namespace testOne {
         {
             //GUI.LoadTheme();
             base.OnLoad();
+
+            Logic.Logic.Init();
 
             // this.VSync = VSyncMode.On;
             this.IsVisible = true;
